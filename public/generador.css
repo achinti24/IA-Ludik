@@ -1,0 +1,130 @@
+:root {
+  --color-principal: #4f46e5;
+  --color-secundario: #06b6d4;
+  --color-acento: #fbbf24;
+  --color-fondo: #f0f4f8;
+  --color-card: #ffffff;
+  --color-texto: #1f2937;
+  --sombra: 0 6px 16px rgba(0, 0, 0, 0.1);
+  --radio: 20px;
+}
+
+/* ====== GENERAL ====== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--color-fondo);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--color-texto);
+}
+
+/* ====== HEADER ====== */
+header {
+  background: linear-gradient(90deg, var(--color-principal), var(--color-secundario));
+  color: #fff;
+  text-align: center;
+  padding: 1px;          /* más compacto */
+  box-shadow: var(--sombra);
+}
+
+header h1 {
+  font-size: 2.0rem;      /* más pequeño */
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1rem;        /* más pequeño */
+}
+
+/* ====== CHAT ====== */
+#chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 100%;
+  margin: 10px auto;
+  height: calc(100vh - 180px); /* ocupa casi toda la pantalla */
+  background: var(--color-card);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+#chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: #fff;
+}
+
+/* ====== MENSAJES ====== */
+#messages {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.msg {
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.bot {
+  background: var(--color-principal);
+  color: white;
+  align-self: flex-start;
+  max-width: 75%;
+}
+
+.user {
+  background: var(--color-secundario);
+  color: white;
+  align-self: flex-end;
+  max-width: 75%;
+}
+
+/* ====== INPUT ====== */
+#input-area {
+  display: flex;
+  padding: 15px;
+  background: #f3f4f6;
+}
+
+#input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#send {
+  margin-left: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-acento);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#send:hover {
+  background: #fcd34d;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #555;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
